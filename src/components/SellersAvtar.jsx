@@ -11,7 +11,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 
 export default function SellersAvtar() {
   return (
-    <Paper >
+    <Paper  sx={{boxShadow: "0px 0px 12px 4px rgba(0,0,0,0.1)" ,m: 3,}}>
       <Stack sx={{width: 270,height:220,m: 2}} alignContent="center">
         <Typography variant="h5" sx={{ font: "bold sans-serif" }}>
           TopSeller

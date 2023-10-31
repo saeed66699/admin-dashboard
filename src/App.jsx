@@ -13,15 +13,15 @@ import HalfCircle from "./components/HalfCircle";
 import SellersAvtar from "./components/SellersAvtar";
 import { Stack, Typography } from "@mui/material";
 // BsCurrencyDollar
-import { BsCurrencyDollar,BsPeopleFill } from 'react-icons/bs';
-import Pnavbar from './components/Pnavbar'
+import { BsCurrencyDollar, BsPeopleFill } from "react-icons/bs";
+import Pnavbar from "./components/Pnavbar";
 function App() {
   useEffect(() => {
     console.log("changescreen");
   }, []);
   return (
     <>
-      <Pnavbar/>
+      <Pnavbar />
     </>
   );
 }

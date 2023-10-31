@@ -98,10 +98,10 @@ const BarChart = ({
         sx={{
           height: "100%",
           width: "100%",
-          // border: "1px solid",
           display: "flex",
           flexDirection: "row",
           m: 1,
+          // border: "1px solid",
         }}
       >
         <Stack

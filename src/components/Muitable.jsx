@@ -57,8 +57,8 @@ export const Muitable = () => {
         <TableCell
           key={index}
           sx={{
-            backgroundColor: "#1976D2",
-            color: "white",
+            backgroundColor: "white",
+            color: "#212121",
             fontWeight: "bold", // Set font weight to bold for header
           }}
         >
@@ -74,7 +74,7 @@ export const Muitable = () => {
   return (<>
       <Typography variant="h3">Users</Typography>
     <Paper sx={{ p: 1, m: 4 }}>
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{boxShadow: "0px 0px 12px 4px rgba(0,0,0,0.1)"}}>
         <Table aria-label="simple table" stickyHeader>
           <TableHead >{generateTableHeaders()}</TableHead>
           <TableBody>
