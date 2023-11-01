@@ -155,7 +155,6 @@ const BarChart = ({
             <Typography variant="h6" sx={{fontSize: "15px", color: "#FF7667"}}>{pricediff}</Typography>
           </Stack>
         </Stack>
-
         <Stack sx={{ width: "45%", mt: 4 }}>
           <canvas ref={chartContainerRef} id="acquisitions" width="250" />
         </Stack>

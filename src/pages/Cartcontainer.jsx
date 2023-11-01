@@ -82,7 +82,6 @@ export default function CartContainer() {
                     alt={product.brand}
                   />
                 </Stack>
-
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {product.title}

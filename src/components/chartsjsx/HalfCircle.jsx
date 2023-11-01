@@ -121,7 +121,7 @@ function HalfCircle({
               {heading}
             </Typography>
           </Stack>
-          <Typography>{price}</Typography>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>{price}</Typography>
           <Stack sx={{ display: "flex", flexDirection: "row" }}>
             <Stack
               sx={{
@@ -145,7 +145,8 @@ function HalfCircle({
               >
                 <ArrowDropDownIcon sx={{ color: smallIconColor }} />
               </Stack>
-              <Typography variant="h5">{pricediff}</Typography>
+              <Typography variant="h6" sx={{fontSize: "15px", color: "#FF7667"}}>{pricediff}</Typography>
+              
             </Stack>
           </Stack>
         </Stack>

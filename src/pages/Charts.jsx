@@ -40,7 +40,6 @@ export const Charts = () => {
           icon={<BsCurrencyDollar size={"18px"} />}
           bordercolor="#5EC7C7"
         />
-
         <HalfCircle
           heading={"Total Vistors"}
           price={"50M"}

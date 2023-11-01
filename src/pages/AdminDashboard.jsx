@@ -6,8 +6,7 @@ import { Stack, Typography } from "@mui/material";
 import { Charts } from "./Charts";
 export const AdminDashboard = () => {
   return (
-    <Stack>
-     
+    <Stack> 
       <Stack
         sx={{
           width: "100%",
@@ -28,11 +27,9 @@ export const AdminDashboard = () => {
           mt: 3,
         }}
       >
-        <SellersAvtar />
-        
+        <SellersAvtar />   
       </Stack>
-      <Stack>
-          
+      <Stack>     
       <Cartcontainer />
       <Muitable />
         </Stack>
