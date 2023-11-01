@@ -24,11 +24,11 @@ const containerStyle = {
 };
 
 const appBarStyle = {
-  backgroundColor: "blue", // Add your custom background color here
+  backgroundColor: "blue", 
 };
 
 const navButtonStyle = {
-  color: "white", // Add your custom text color here
+  color: "white",
 };
 
 const userAvatarStyle = {
@@ -113,7 +113,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </div>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: "flex", md: "none" },border:'10px solid red', mr: 1 }} />
           <Typography
             variant="h5"
             noWrap

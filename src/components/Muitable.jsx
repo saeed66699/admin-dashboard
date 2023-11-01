@@ -92,6 +92,7 @@ export const Muitable = () => {
                       <TableCell>{index.phone}</TableCell>
                       <TableCell>{index.university}</TableCell>
                       <TableCell>{index.company.address.address+"  "+''+index.company.address.city}</TableCell>
+                     
                     </TableRow>
                   );
                 })}
