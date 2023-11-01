@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route,Routes, Link } from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import { styled, useTheme } from "@mui/material/styles";
 import {
@@ -25,9 +24,9 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import { AdminDashboard } from "./AdminDashboard";
-import CartContainer from "./Cartcontainer";
-import { Muitable } from "./Muitable";
+import { AdminDashboard } from "../pages/AdminDashboard";
+import CartContainer from "../pages/Cartcontainer";
+import { Muitable } from "../pages/Muitable";
 
 const drawerWidth = 240;
 
@@ -89,68 +88,65 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    
-      <Box sx={{ display: "flex" }}>
-        <CssBaseline />
-        <AppBar position="fixed" open={open}>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-              sx={{ mr: 2, ...(open && { display: "none" }) }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap component="div">
-              Dashboard
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <Drawer
-          sx={{
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <AppBar position="fixed" open={open}>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{ mr: 2, ...(open && { display: "none" }) }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap component="div">
+            Dashboard
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
             width: drawerWidth,
-            flexShrink: 0,
-            "& .MuiDrawer-paper": {
-              width: drawerWidth,
-              boxSizing: "border-box",
-            },
-          }}
-          variant="persistent"
-          anchor="left"
-          open={open}
-        >
-          <DrawerHeader>
-            <IconButton onClick={handleDrawerClose}>
-              {theme.direction === "ltr" ? (
-                <ChevronLeftIcon />
-              ) : (
-                <ChevronRightIcon />
-              )}
-            </IconButton>
-          </DrawerHeader>
-          <Divider />
-          <List>
-            {["Admin-DashBoard", "Products", "UserTable"].map((text, index) => (
-              <ListItem
-                key={text}
-                disablePadding
-                component={Link}
-                to={text.toLowerCase()} // Use text as the route path
-              >
-                <ListItemButton>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-        </Drawer>
-        <Main open={open}>
+            boxSizing: "border-box",
+          },
+        }}
+        variant="persistent"
+        anchor="left"
+        open={open}
+      >
+        <DrawerHeader>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === "ltr" ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
+          </IconButton>
+        </DrawerHeader>
+        <Divider />
+        <List>
+          {["Admin-DashBoard", "Products", "UserTable"].map((text, index) => (
+            <ListItem
+              key={text}
+              disablePadding
+              component={Link}
+              to={text.toLowerCase()} // Use text as the route path
+            >
+              <ListItemButton>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+      <Main open={open}>
         <DrawerHeader />
-          
-        </Main>
-      </Box>
-   
+      </Main>
+    </Box>
   );
 }
