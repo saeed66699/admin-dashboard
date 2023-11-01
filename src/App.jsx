@@ -7,6 +7,7 @@ import Cartcontainer from "./pages/Cartcontainer";
 import Pnavbar from "./components/Pnavbar";
 import { AdminDashboard } from "./pages/AdminDashboard";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Charts } from "./pages/Charts";
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/admin-Dashboard" element={<Navigate to="/" />} />
           <Route path="/UserTable" element={<Muitable />} />
           <Route path="/Products" element={<Cartcontainer />} />
+          <Route path="/Charts" element={<Charts />} />
         </Routes>
       </BrowserRouter>
     </>
