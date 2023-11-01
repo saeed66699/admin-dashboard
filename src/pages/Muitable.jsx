@@ -21,10 +21,10 @@ export const Muitable = () => {
 
   const fetchData = async () => {
     try {
+      
       const response = await axios.get("https://dummyjson.com/users?limit=4");
       const data = response.data.users;
       console.log(data);
-      // Dispatch the action to update the Redux state
       dispatch(setRows(data));
     } catch (e) {
       console.log(e.message);
