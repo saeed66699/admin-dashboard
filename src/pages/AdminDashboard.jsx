@@ -7,7 +7,7 @@ import { Charts } from "./Charts";
 export const AdminDashboard = () => {
   return (
     <Stack>
-      <Typography variant="h2">Shoping dashboard</Typography>
+     
       <Stack
         sx={{
           width: "100%",
@@ -29,9 +29,13 @@ export const AdminDashboard = () => {
         }}
       >
         <SellersAvtar />
+        
       </Stack>
+      <Stack>
+          
       <Cartcontainer />
       <Muitable />
+        </Stack>
     </Stack>
   );
 };

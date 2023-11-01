@@ -24,9 +24,9 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import { AdminDashboard } from "../pages/AdminDashboard";
-import CartContainer from "../pages/Cartcontainer";
-import { Muitable } from "../pages/Muitable";
+import { AdminDashboard } from "../../pages/AdminDashboard";
+import CartContainer from "../../pages/Cartcontainer";
+import { Muitable } from "../../pages/Muitable";
 
 const drawerWidth = 240;
 
@@ -91,7 +91,8 @@ export default function PersistentDrawerLeft() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar>
+        <Toolbar
+        >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -120,6 +121,7 @@ export default function PersistentDrawerLeft() {
         open={open}
       >
         <DrawerHeader>
+          <Typography variant="h5" alignContent='center'>Admin Panel</Typography>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
@@ -130,18 +132,20 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Admin-DashBoard", "Products", "UserTable","Charts"].map((text, index) => (
-            <ListItem
-              key={text}
-              disablePadding
-              component={Link}
-              to={text.toLowerCase()} // Use text as the route path
-            >
-              <ListItemButton>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          {["Admin-DashBoard", "Products", "UserTable", "Charts"].map(
+            (text, index) => (
+              <ListItem
+                key={text}
+                disablePadding
+                component={Link}
+                to={text.toLowerCase()} // Use text as the route path
+              >
+                <ListItemButton>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            )
+          )}
         </List>
       </Drawer>
       <Main open={open}>

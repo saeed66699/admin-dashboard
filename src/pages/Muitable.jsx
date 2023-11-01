@@ -22,7 +22,7 @@ export const Muitable = () => {
   const fetchData = async () => {
     try {
       
-      const response = await axios.get("https://dummyjson.com/users?limit=4");
+      const response = await axios.get("https://dummyjson.com/users?limit=7");
       const data = response.data.users;
       console.log(data);
       dispatch(setRows(data));
@@ -73,8 +73,8 @@ export const Muitable = () => {
   const rows = useSelector((state) => state.table.rows);
   return (<>
       <Typography variant="h3">Users</Typography>
-    <Paper sx={{ p: 1, m: 4 }}>
-      <TableContainer component={Paper} sx={{boxShadow: "0px 0px 12px 4px rgba(0,0,0,0.1)"}}>
+    <Paper sx={{  m: 4 }}>
+      <TableContainer component={Paper} >
         <Table aria-label="simple table" stickyHeader>
           <TableHead >{generateTableHeaders()}</TableHead>
           <TableBody>

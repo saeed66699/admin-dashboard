@@ -59,15 +59,14 @@ export default function CartContainer() {
                 m: 2,
                 width: 350,
                 height: 350,
-                boxShadow: "0px 0px 12px 4px rgba(0,0,0,0.1)",
+                
               }}
             >
-              <Card sx={{ width: "100%", height: "100%" }}>
+              <Card sx={{ width: "100%", height: "100%",boxShadow: "0px 0px 12px 4px rgba(0,0,0,0.1)", }}>
                 <Stack
                   sx={{
                     height: "200px",
                     borderRadius: "10px",
-                   
                     padding: "20px",
                   }}
                 >

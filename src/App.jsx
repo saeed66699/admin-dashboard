@@ -4,7 +4,7 @@ import "./App.css";
 import { Muitable } from "./pages/Muitable";
 
 import Cartcontainer from "./pages/Cartcontainer";
-import Pnavbar from "./components/Pnavbar";
+import Pnavbar from "./components/header/Pnavbar";
 import { AdminDashboard } from "./pages/AdminDashboard";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Charts } from "./pages/Charts";
